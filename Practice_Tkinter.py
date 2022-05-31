@@ -24,9 +24,12 @@ todays_day_num = int(today.strftime("%j"))
 # Designated day
 target_date = 266
 days_left = target_date - todays_day_num
+weeks_left = round(days_left / 7)
 
 # Display days left
 countdown_label = Label(root, text=f"There are only {days_left} days left until FREEDOM", font=("Helvetica", 15))
 countdown_label.pack(pady=20)
+countdown_label2 = Label(root, text=f"There are only {weeks_left} weeks left until FREEDOM", font=("Helvetica", 15))
+countdown_label2.pack(pady=20)
 
 root.mainloop()
